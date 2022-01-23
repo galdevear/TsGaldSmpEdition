@@ -1,0 +1,2 @@
+##USEHORN##
+execute if entity @s[type=player] at @s if predicate tsurvival:offhand_items/warhorn run function tsurvival:warhorn/usehorn

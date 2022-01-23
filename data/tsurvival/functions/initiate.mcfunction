@@ -27,3 +27,7 @@ team modify Bears friendlyFire false
 
 ###CONTROLLER###
 scoreboard players set #tsurv.controller tsurv.controller 1
+
+###SCORE HOLDERS###
+#declare score_holder $nSpawns
+scoreboard players add $nSpawns tsurv.ncounter 0

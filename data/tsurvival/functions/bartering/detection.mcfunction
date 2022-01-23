@@ -1,5 +1,5 @@
 ###DETECTGILDEDBLACKSTONEBARTER###
-execute as @e[type=piglin,tag=!tsurv.barter] if predicate tsurvival:tsurv.gildedcheck at @s run schedule function tsurvival:bartering/sold 5s
-execute as @e[type=piglin,tag=!tsurv.barter] if predicate tsurvival:tsurv.gildedcheck at @s run tag @s add tsurv.barter
+# 2.5-5 seconds for first barter. 5 seconds for any barter immediately after. Need to test to see how long before the piglin gets rid of the item its holding before increasing time.
+schedule function tsurvival:bartering/detection 2.5s
 
-schedule function tsurvival:bartering/detection 10t
+execute as @e[type=piglin] run function tsurvival:bartering/barter

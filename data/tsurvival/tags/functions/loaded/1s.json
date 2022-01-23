@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        "tsurvival:crafter/detect_air",
+        "tsurvival:illager_conversion/detection",
+        "tsurvival:soul_well/detection",
+        "tsurvival:hardermobs/deepmobs/biters/detection",
+        "tsurvival:hardermobs/deepmobs/speed/detection",
+        "tsurvival:strider_jockey/detection",
+        "tsurvival:spelunker/detection",
+        "tsurvival:voyager/detection"
+    ]
+}

@@ -1,3 +1,2 @@
-###using health data stage one###
-execute as @e[type=ender_dragon,limit=1] at @s in minecraft:the_end if score @p tsurv.edragon matches ..150 run function tsurvival:teledragon/summon1
+execute as @e[type=minecraft:ender_dragon] at @s run function tsurvival:teledragon/loop1-a
 schedule function tsurvival:teledragon/loop1 15s

@@ -1,23 +1,10 @@
-##OAKFIREWOOD##
-execute as @e[type=item,nbt={Item: {id: "minecraft:oak_log",}}] at @s if block ~ ~-0.4 ~ minecraft:campfire[lit=true] run function tsurvival:firewood/warmth
+# TODO: Change the tags to say firewood at the beginning
+#declare tag tsurv.campfireFuel
+#declare tag tsurv.soulCampfireFuel
+#declare tag tsurv.firewood.item
 
-##BIRCHFIREWOOD##
-execute as @e[type=item,nbt={Item: {id: "minecraft:birch_log",}}] at @s if block ~ ~-0.4 ~ minecraft:campfire[lit=true] run function tsurvival:firewood/warmth
-
-##JUNGLEFIREWOOD##
-execute as @e[type=item,nbt={Item: {id: "minecraft:jungle_log",}}] at @s if block ~ ~-0.4 ~ minecraft:campfire[lit=true] run function tsurvival:firewood/warmth
-
-##ACACIAFIREWOOD##
-execute as @e[type=item,nbt={Item: {id: "minecraft:acacia_log",}}] at @s if block ~ ~-0.4 ~ minecraft:campfire[lit=true] run function tsurvival:firewood/warmth
-
-##DARKOAKFIREWOOD##
-execute as @e[type=item,nbt={Item: {id: "minecraft:dark_oak_log",}}] at @s if block ~ ~-0.4 ~ minecraft:campfire[lit=true] run function tsurvival:firewood/warmth
-
-##SPRUCEFIREWOOD##
-execute as @e[type=item,nbt={Item: {id: "minecraft:spruce_log",}}] at @s if block ~ ~-0.4 ~ minecraft:campfire[lit=true] run function tsurvival:firewood/warmth
-
-##CRIMSONFIREWOOD##
-execute as @e[type=item,nbt={Item: {id: "minecraft:crimson_stem",}}] at @s if block ~ ~-0.4 ~ minecraft:soul_campfire[lit=true] run function tsurvival:firewood/warmth 
-
-##WARPEDFIREWOOD##
-execute as @e[type=item,nbt={Item: {id: "minecraft:warped_stem",}}] at @s if block ~ ~-0.4 ~ minecraft:soul_campfire[lit=true] run function tsurvival:firewood/warmth
+# Process items
+# TODO add global ignore conditions
+execute if entity @s[type=item,tag=!tsurv.firewood.item] run function tsurvival:firewood/is_fuel
+execute if entity @s[type=item,tag=tsurv.campfireFuel] at @s if block ~ ~-0.4 ~ minecraft:campfire[lit=true] run function tsurvival:firewood/warmth
+execute if entity @s[type=item,tag=tsurv.soulCampfireFuel] at @s if block ~ ~-0.4 ~ minecraft:soul_campfire[lit=true] run function tsurvival:firewood/warmth 

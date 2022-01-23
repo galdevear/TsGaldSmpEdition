@@ -1,3 +1,2 @@
-execute as @e[type=#tsurvival:tsurv.jockeyspawns,tag=!tsurv.found] at @s run function tsurvival:strider_jockey/scoreboard
-
-schedule function tsurvival:strider_jockey/detection 1s
+# Count the spawning of nether mobs
+execute as @s[type=#tsurvival:tsurv.count_spawns,tag=!tsurv.strider_jockey.found] at @s if predicate tsurvival:in_nether run function tsurvival:strider_jockey/scoreboard
